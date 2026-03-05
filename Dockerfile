@@ -1,3 +1,4 @@
-FROM openjdk:11-jdk-slim
-COPY target/devops-demo-app-1.0.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM eclipse-temurin:11-jdk
+WORKDIR /app
+COPY target/*.jar app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
